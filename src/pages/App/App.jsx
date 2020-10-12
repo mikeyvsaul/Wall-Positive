@@ -34,7 +34,7 @@ class App extends Component {
         />
         <Switch>
           <Route exact path='/' render={() =>
-           <div>Hello World!</div> 
+           <div>Wall Positive</div> 
           }/>
           <Route exact path='/signup' render={({ history }) => 
             <SignupPage
