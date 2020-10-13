@@ -4,15 +4,15 @@ import './MessageListItem.css';
 
 function MessageListItem(props) {
   return (
-    // <div className='panel panel-default'>
-    //   <div className="panel-heading">
-    //     <h3 className='panel-title'>{props.message.name}</h3>
-    //   </div>
-    //   <div className='panel-footer MessageListItem-action-panel'>
+    <div className='panel panel-default'>
+      <div className="panel-heading">
+        <h3 className='panel-title'>{props.message.content}</h3>
+      </div>
+      <div className='panel-footer MessageListItem-action-panel'>
         
-    //   </div>
-    // </div>
-    <h4>Message List Item</h4>
+      </div>
+    </div>
+    // <h4>Message List Item</h4>
   )
 }
 

@@ -6,7 +6,7 @@ function MessageListPage(props) {
   return (
     <>
       <h1>Message List</h1>
-      <div>
+      <div className="MessageListPage-grid">
         {props.messages.map(message => (
           <MessageListItem message={message} key={message._id} />
         ))}
