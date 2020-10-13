@@ -5,6 +5,8 @@ const logger = require('morgan');
 
 const app = express();
 
+let messagesRouter = require('./routes/api/messages')
+
 require('dotenv').config();
 require('./config/database.js');
 

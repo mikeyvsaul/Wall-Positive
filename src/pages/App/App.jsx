@@ -5,13 +5,21 @@ import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
 import NavBar from '../../components/NavBar/NavBar';
+import * as messageAPI from '../../services/messages-api';
+import MessageListPage from '../../components/MessageListPage/MessageListPage'
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      user: userService.getUser()
+      user: userService.getUser(),
+      messages: []
     };
+  }
+
+  async componentDidMount() {
+    const messages = await messageAPI.getAll();
+    this.setState({messages});
   }
 
   /*--- Callback Methods ---*/
@@ -33,9 +41,7 @@ class App extends Component {
         handleLogout={this.handleLogout}
         />
         <Switch>
-          <Route exact path='/' render={() =>
-           <div>Wall Positive</div> 
-          }/>
+          
           <Route exact path='/signup' render={({ history }) => 
             <SignupPage
               history={history}
@@ -49,6 +55,14 @@ class App extends Component {
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
+          <main>
+            <Route exact path='/' render={({history}) => 
+              <MessageListPage
+                history={history}
+                messages={this.state.messages}
+              />
+            } />
+          </main>
         </Switch>
       </div>
     );
