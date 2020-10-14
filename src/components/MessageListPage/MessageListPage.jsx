@@ -8,7 +8,11 @@ function MessageListPage(props) {
       <h1>Message List</h1>
       <div className="MessageListPage-grid">
         {props.messages.map(message => (
-          <MessageListItem message={message} key={message._id} />
+          <MessageListItem 
+            key={message._id} 
+            message={message}
+            handleDeleteMessage={props.handleDeleteMessage} 
+          />
         ))}
       </div>
     </>

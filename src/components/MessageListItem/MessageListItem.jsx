@@ -19,6 +19,12 @@ function MessageListItem(props) {
       >
         DETAILS
       </Link>
+      <button
+        classname="btn btn-xs btn-danger margin-left-10"
+        onClick={() => props.handleDeleteMessage(props.message._id)}
+      >
+        DELETE
+      </button>
     </div>
   )
 }

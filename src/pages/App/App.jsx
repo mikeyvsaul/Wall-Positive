@@ -41,6 +41,13 @@ class App extends Component {
     }),
     () => this.props.history.push('/'));
   }
+
+  handleDeleteMessage = async id => {
+    await messageAPI.deleteOne(id);
+    this.setState(state => ({
+      messages: state.messages.filter(m => m._id !== id)
+    }), () => this.props.history.push('/'));
+  }
   /*--- Lifecycle Methods ---*/
 
   render() {
@@ -73,6 +80,7 @@ class App extends Component {
               <MessageListPage
                 history={history}
                 messages={this.state.messages}
+                handleDeleteMessage={this.handleDeleteMessage}
               />
             } />
             <Route exact path='/details' render={({location}) =>

@@ -9,26 +9,46 @@ module.exports = {
 };
 
 async function index(req, res) {
-  const messages = await Message.find({});
-  res.status(200).json(messages);
+  try {
+    const messages = await Message.find({});
+    res.status(200).json(messages);
+  } catch (err) {
+    res.status(400).json(err);
+  }
 }
 
 async function show(req, res) {
-  const message = await Message.findById(req.params.id);
-  res.status(200).json(message);
+  try {
+    const message = await Message.findById(req.params.id);
+    res.status(200).json(message);
+  } catch (err) {
+    res.status(400).json(err);
+  }
 }
 
 async function create(req, res) {
-  const message = await Message.create(req.body);
-  res.status(201).json(message);
+  try {
+    const message = await Message.create(req.body);
+    res.status(201).json(message);
+  } catch (err) {
+    res.status(400).json(err);
+  }
 }
 
 async function deleteOne(req, res) {
-  const deletedMessage = await Message.findByIdAndRemove(req.params.id);
-  res.status(200).json(deletedMessage);
+  try {
+    const deletedMessage = await Message.findByIdAndRemove(req.params.id);
+    res.status(200).json(deletedMessage);
+  } catch (err) {
+    res.status(400).json(err);
+  }
 }
 
 async function update(req, res) {
-  const updatedMessage = await Message.findByIdAndUpdate(req.params.id, req.body, {new: true});
-  res.status(200).json(updatedMessage);
+  try {
+    const updatedMessage = await Message.findByIdAndUpdate(req.params.id, req.body, {new: true});
+    res.status(200).json(updatedMessage);
+  } catch (err) {
+    res.status(400).json(err);
+  }
 }
