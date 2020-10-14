@@ -12,7 +12,6 @@ function MessageListItem(props) {
         
       </div>
     </div>
-    // <h4>Message List Item</h4>
   )
 }
 

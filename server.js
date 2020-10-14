@@ -3,12 +3,13 @@ const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
 
+require('dotenv').config();
+require('./config/database.js');
+
 const app = express();
 
 let messagesRouter = require('./routes/api/messages')
 
-require('dotenv').config();
-require('./config/database.js');
 
 app.use(logger('dev'));
 app.use(express.json());
