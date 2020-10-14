@@ -8,6 +8,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import * as messageAPI from '../../services/messages-api';
 import MessageListPage from '../../components/MessageListPage/MessageListPage';
 import AddMessagePage from '../../components/AddMessagePage/AddMessagePage';
+import MessageDetailPage from '../../components/MessageDetailPage/MessageDetailPage';
 
 class App extends Component {
   constructor() {
@@ -73,6 +74,9 @@ class App extends Component {
                 history={history}
                 messages={this.state.messages}
               />
+            } />
+            <Route exact path='/details' render={({location}) =>
+              <MessageDetailPage location={location} />
             } />
           </main>
         </Switch>
