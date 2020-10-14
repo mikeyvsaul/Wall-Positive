@@ -9,6 +9,7 @@ import * as messageAPI from '../../services/messages-api';
 import MessageListPage from '../../components/MessageListPage/MessageListPage';
 import AddMessagePage from '../../components/AddMessagePage/AddMessagePage';
 import MessageDetailPage from '../../components/MessageDetailPage/MessageDetailPage';
+import EditMessagePage from '../../components/EditMessagePage/EditMessagePage';
 
 class App extends Component {
   constructor() {
@@ -48,6 +49,17 @@ class App extends Component {
       messages: state.messages.filter(m => m._id !== id)
     }), () => this.props.history.push('/'));
   }
+
+  handleUpdateMessage = async updatedMessageData => {
+    const updatedMessage = await messageAPI.update(updatedMessageData);
+    const newMessagesArray = this.state.messages.map(m => 
+      m._id === updatedMessage._id ? updatedMessage : m
+    );
+    this.setState(
+      {messages: newMessagesArray},
+      () => this.props.history.push('/')
+    );
+  }
   /*--- Lifecycle Methods ---*/
 
   render() {
@@ -85,6 +97,12 @@ class App extends Component {
             } />
             <Route exact path='/details' render={({location}) =>
               <MessageDetailPage location={location} />
+            } />
+            <Route exact path='/edit' render={({location}) =>
+              <EditMessagePage
+                handleUpdateMessage={this.handleUpdateMessage}
+                location={location}
+              />
             } />
           </main>
         </Switch>

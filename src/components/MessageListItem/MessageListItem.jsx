@@ -19,6 +19,15 @@ function MessageListItem(props) {
       >
         DETAILS
       </Link>
+      <Link
+        classname='btn btn-xs btn-warning'
+        to={{
+          pathname: '/edit',
+          state: {message: props.message}
+        }}
+      >
+        EDIT
+      </Link>
       <button
         classname="btn btn-xs btn-danger margin-left-10"
         onClick={() => props.handleDeleteMessage(props.message._id)}
