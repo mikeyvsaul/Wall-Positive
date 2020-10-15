@@ -38,7 +38,8 @@ class App extends Component {
   handleAddMessage = async newMessageData => {
     const newMessage = await messageAPI.create(newMessageData);
     this.setState(state => ({
-      messages: [...state.messages, newMessage]
+      messages: [...state.messages, newMessage],
+      user: userService.getUser()
     }),
     () => this.props.history.push('/'));
   }
@@ -84,27 +85,28 @@ class App extends Component {
           }/>
           <Route exact path='/add' render={() => 
             <AddMessagePage
+              user={this.state.user} 
               handleAddMessage={this.handleAddMessage}
             />
           } />
-          <main>
-            <Route exact path='/' render={({history}) => 
-              <MessageListPage
-                history={history}
-                messages={this.state.messages}
-                handleDeleteMessage={this.handleDeleteMessage}
-              />
-            } />
-            <Route exact path='/details' render={({location}) =>
-              <MessageDetailPage location={location} />
-            } />
-            <Route exact path='/edit' render={({location}) =>
-              <EditMessagePage
-                handleUpdateMessage={this.handleUpdateMessage}
-                location={location}
-              />
-            } />
-          </main>
+          {/* <main> */}
+          <Route exact path='/' render={({history}) => 
+            <MessageListPage
+              history={history}
+              messages={this.state.messages}
+              handleDeleteMessage={this.handleDeleteMessage}
+            />
+          } />
+          <Route exact path='/details' render={({location}) =>
+            <MessageDetailPage location={location} />
+          } />
+          <Route exact path='/edit' render={({location}) =>
+            <EditMessagePage
+              handleUpdateMessage={this.handleUpdateMessage}
+              location={location}
+            />
+          } />
+          {/* </main> */}
         </Switch>
       </div>
     );

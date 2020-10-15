@@ -27,10 +27,10 @@ class EditMessagePage extends Component {
       <>
         <h1>Edit Message</h1>
         <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
-          <div classname="form-group">
+          <div className="form-group">
             <label>Message</label>
             <input
-              classname="form-control"
+              className="form-control"
               name="content"
               value={this.state.formData.content}
               onChange={this.handleChange}

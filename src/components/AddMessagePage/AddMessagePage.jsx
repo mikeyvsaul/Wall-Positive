@@ -4,7 +4,8 @@ class AddMessagePage extends Component {
   state = {
     invalidForm: true,
     formData: {
-      content: ''
+      content: '',
+      user: this.props.user._id
     }
   };
 
