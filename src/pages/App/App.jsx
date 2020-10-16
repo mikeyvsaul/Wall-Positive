@@ -24,6 +24,14 @@ class App extends Component {
   async componentDidMount() {
     const messages = await messageAPI.getAll();
     this.setState({messages});
+    // document.getElementById('circles')
+    //   .addEventListener('click', this.handleClick)
+  }
+
+  handleClick = (e) => {
+    let locX = e.clientX;
+    let locY = e.clientY;
+    console.log(locX, locY)
   }
 
   /*--- Callback Methods ---*/
@@ -62,6 +70,7 @@ class App extends Component {
       () => this.props.history.push('/')
     );
   }
+
   /*--- Lifecycle Methods ---*/
 
   render() {
@@ -94,6 +103,7 @@ class App extends Component {
             <Wall
               history={history}
               messages={this.state.messages}
+              handleClick={this.handleClick}
             />
           } />
           <Route exact path='/list' render={({history}) => 
