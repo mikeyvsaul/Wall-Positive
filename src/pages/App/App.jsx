@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, NavLink } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import * as messageAPI from '../../services/messages-api';
 import SignupPage from '../SignupPage/SignupPage';

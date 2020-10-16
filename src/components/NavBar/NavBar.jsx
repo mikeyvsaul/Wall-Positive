@@ -5,9 +5,9 @@ import './NavBar.css';
 const NavBar = (props) => {
   let navUser = props.user ?
     <div>
-      <NavLink exact to='/add'>Add Message</NavLink>
+      <NavLink exact to='/add' className='NavBar-link'>Add Message</NavLink>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-      <NavLink exact to='/list'>Your Messages</NavLink>
+      <NavLink exact to='/list' className='NavBar-link'>Your Messages</NavLink>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <NavLink to='' className='NavBar-link' onClick={props.handleLogout}>LOG OUT</NavLink>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;

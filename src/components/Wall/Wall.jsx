@@ -9,7 +9,7 @@ function Wall(props) {
       <div className="Wall-grid">
         {props.messages.map(message => (
           <WallItem 
-            // key={message._id} 
+            key={message._id} 
             message={message}
             // handleDeleteMessage={props.handleDeleteMessage} 
           />
