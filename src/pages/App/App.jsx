@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import { Route, Switch, NavLink } from 'react-router-dom';
 import './App.css';
+import * as messageAPI from '../../services/messages-api';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
 import NavBar from '../../components/NavBar/NavBar';
-import * as messageAPI from '../../services/messages-api';
 import MessageListPage from '../../components/MessageListPage/MessageListPage';
 import AddMessagePage from '../../components/AddMessagePage/AddMessagePage';
 import MessageDetailPage from '../../components/MessageDetailPage/MessageDetailPage';
 import EditMessagePage from '../../components/EditMessagePage/EditMessagePage';
+import Wall from '../../components/Wall/Wall';
 
 class App extends Component {
   constructor() {
@@ -89,10 +90,16 @@ class App extends Component {
               handleAddMessage={this.handleAddMessage}
             />
           } />
-          {/* <main> */}
           <Route exact path='/' render={({history}) => 
+            <Wall
+              history={history}
+              messages={this.state.messages}
+            />
+          } />
+          <Route exact path='/list' render={({history}) => 
             <MessageListPage
               history={history}
+              user={this.state.user}
               messages={this.state.messages}
               handleDeleteMessage={this.handleDeleteMessage}
             />
@@ -106,7 +113,6 @@ class App extends Component {
               location={location}
             />
           } />
-          {/* </main> */}
         </Switch>
       </div>
     );

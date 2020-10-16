@@ -7,6 +7,8 @@ const NavBar = (props) => {
     <div>
       <NavLink exact to='/add'>Add Message</NavLink>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      <NavLink exact to='/list'>Your Messages</NavLink>
+      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <NavLink to='' className='NavBar-link' onClick={props.handleLogout}>LOG OUT</NavLink>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <span className='NavBar-welcome'>WELCOME, {props.user.name}</span>
