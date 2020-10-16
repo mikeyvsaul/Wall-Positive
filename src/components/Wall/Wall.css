@@ -1,4 +1,10 @@
-Wall-grid {
+.Site-title {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.Wall-grid {
   width: 80%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
