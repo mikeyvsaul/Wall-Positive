@@ -1,7 +1,24 @@
+import tokenService from "../utils/tokenService";
+
 const BASE_URL = '/api/messages';
 
 export function getAll() {
-  return fetch(BASE_URL)
+  return fetch(BASE_URL, {
+    method: 'GET',
+    headers: {
+      'content-type': 'application/json',
+      'Authorization': 'Bearer' + tokenService.getToken()
+  }})
+  .then(res => res.json());
+}
+
+export function getAllUser(id) {
+  return fetch(`${BASE_URL}/${id}`, {
+    method: 'GET',
+    headers: {
+      'content-type': 'application/json',
+      'Authorization': 'Bearer' + tokenService.getToken()
+  }})
   .then(res => res.json());
 }
 

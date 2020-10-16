@@ -2,6 +2,7 @@ const Message = require('../../models/message');
 
 module.exports = {
   index,
+  userIndex,
   show,
   create,
   delete: deleteOne,
@@ -11,6 +12,16 @@ module.exports = {
 async function index(req, res) {
   try {
     const messages = await Message.find({});
+    res.status(200).json(messages);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+}
+
+async function userIndex(req, res) {
+  console.log(req.user)
+  try {
+    const messages = await Message.find({user: req.params.id});
     res.status(200).json(messages);
   } catch (err) {
     res.status(400).json(err);

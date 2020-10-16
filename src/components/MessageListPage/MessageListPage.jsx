@@ -3,6 +3,7 @@ import './MessageListPage.css';
 import MessageListItem from '../MessageListItem/MessageListItem';
 
 function MessageListPage(props) {
+  console.log(props.userMessages)
   return (
     <>
       {!props.user ? (
@@ -11,13 +12,13 @@ function MessageListPage(props) {
         <>
           <h1>Message List</h1>
           <div className="MessageListPage-grid">
-            {props.messages.map(message => (
-              <MessageListItem 
-                key={message._id} 
-                message={message}
-                handleDeleteMessage={props.handleDeleteMessage} 
-              />
-            ))}
+            {props.userMessages.map(message => 
+                <MessageListItem 
+                  key={message._id} 
+                  message={message}
+                  handleDeleteMessage={props.handleDeleteMessage} 
+                />
+            )}
           </div>
         </>
       )}

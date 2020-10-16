@@ -17,13 +17,15 @@ class App extends Component {
     super();
     this.state = {
       user: userService.getUser(),
-      messages: []
+      messages: [],
+      userMessages: []
     };
   }
 
   async componentDidMount() {
     const messages = await messageAPI.getAll();
-    this.setState({messages});
+    const userMessages = await messageAPI.getAllUser();
+    this.setState({messages: messages, userMessages: userMessages});
   }
 
   /*--- Callback Methods ---*/
@@ -100,6 +102,7 @@ class App extends Component {
             <MessageListPage
               history={history}
               user={this.state.user}
+              userMessages={this.state.userMessages}
               messages={this.state.messages}
               handleDeleteMessage={this.handleDeleteMessage}
             />
