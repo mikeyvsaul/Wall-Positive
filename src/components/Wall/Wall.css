@@ -10,3 +10,14 @@
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   grid-gap: 20px;
 }
+
+/* .Wall-grid {
+  list-style: none;
+  display: inline;
+  font: 12px Arial;
+  color: white;
+  border-radius: 4px;
+  background-color: gray;
+  padding: 4px;
+  margin-right: 5px;
+} */
