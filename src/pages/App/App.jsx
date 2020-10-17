@@ -17,7 +17,8 @@ class App extends Component {
     super();
     this.state = {
       user: userService.getUser(),
-      messages: []
+      messages: [],
+      place: []
     };
   }
 
@@ -31,7 +32,16 @@ class App extends Component {
   handleClick = (e) => {
     let locX = e.clientX;
     let locY = e.clientY;
+    const positionArr = [locX, locY];
     console.log(locX, locY)
+    this.props.history.push({
+      pathname: '/add',
+      state: {
+        position: positionArr
+      }
+    })
+    this.setState({position: positionArr})
+    // console.log(this.props.history.state.place)
   }
 
   /*--- Callback Methods ---*/
@@ -95,7 +105,9 @@ class App extends Component {
           }/>
           <Route exact path='/add' render={() => 
             <AddMessagePage
-              user={this.state.user} 
+              user={this.state.user}
+              state={this.state}
+              handleClick={this.handleClick} 
               handleAddMessage={this.handleAddMessage}
             />
           } />

@@ -5,10 +5,11 @@
 }
 
 .Wall-grid {
-  width: 80%;
-  display: grid;
+  width: 100vw;
+  height: 100vh;
+  /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 20px; */
 }
 
 /* .Wall-grid {

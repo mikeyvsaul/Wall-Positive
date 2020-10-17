@@ -2,10 +2,15 @@ import React from 'react';
 import './WallItem.css';
 
 function WallItem(props) {
+  let xPos = props.message.locationX;
+  let yPos = props.message.locationY;
+
   const wallStyle = {
     position: 'absolute',
-    left: '600px',
-    top: '400px'
+    left: xPos,
+    top: yPos,
+    transform: 'rotate(30deg)',
+    
   }
 
   return (
