@@ -8,7 +8,8 @@ const messageSchema = new Schema({
     ref: 'User'
   },
   displayed: false,
-  location: String,
+  locationX: Number,
+  locationY: Number,
   font: String,
   orientation: String,
   color: String,

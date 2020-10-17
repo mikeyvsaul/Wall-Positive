@@ -9,20 +9,26 @@ function Wall(props) {
   //   // addCircle(evt.clientX, evt.clientY);
   //   console.log('click')
   // })
+  // const wallStyle = {
+  //   position: 'absolute',
+  //   right: '464 px',
+  //   top: '107 px'
+  // }
 
   return (
     <>
       <h1 className="Site-title">Wall Positive</h1>
-      <div className="Wall-grid">
-      <div id="circles" onClick={(e) => props.handleClick(e)}>
+      <div className="Wall-grid" onClick={(e) => props.handleClick(e)}>
+      {/* <div className="Wall" > */}
         {props.messages.map(message => (
           <WallItem 
             key={message._id} 
             message={message}
+            // style={wallStyle}
           />
         ))}
       </div>
-      </div>
+      {/* </div> */}
     </>
   );
 }
