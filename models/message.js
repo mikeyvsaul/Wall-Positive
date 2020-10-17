@@ -10,10 +10,10 @@ const messageSchema = new Schema({
   displayed: false,
   locationX: Number,
   locationY: Number,
+  orientation: Number,
+  size: Number,
   font: String,
-  orientation: String,
   color: String,
-  size: Number
 }, {
   timestamps: true
 });

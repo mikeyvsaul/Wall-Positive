@@ -114,6 +114,7 @@ class App extends Component {
           <Route exact path='/' render={({history}) => 
             <Wall
               history={history}
+              user={this.state.user}
               messages={this.state.messages}
               handleClick={this.handleClick}
             />
