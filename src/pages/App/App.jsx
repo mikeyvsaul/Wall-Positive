@@ -33,7 +33,7 @@ class App extends Component {
     let locX = e.clientX;
     let locY = e.clientY;
     const positionArr = [locX, locY];
-    console.log(locX, locY)
+    // console.log(locX, locY)
     this.props.history.push({
       pathname: '/add',
       state: {
@@ -77,7 +77,7 @@ class App extends Component {
     );
     this.setState(
       {messages: newMessagesArray},
-      () => this.props.history.push('/list')
+      () => this.props.history.push('/')
     );
   }
 

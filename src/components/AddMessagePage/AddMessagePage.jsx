@@ -6,8 +6,8 @@ class AddMessagePage extends Component {
     formData: {
       content: '',
       user: this.props.user._id,
-      locationX: this.props.state.position[0],
-      locationY: this.props.state.position[1],
+      // locationX: this.props.state.position[0],
+      // locationY: this.props.state.position[1],
       orientation: 0,
       size: 20,
       color: '',
@@ -86,7 +86,6 @@ class AddMessagePage extends Component {
               name="color"
               value={this.state.formData.color}
               onChange={this.handleChange}
-              // defaultValue="black"
             >
               <option value="black">Black</option>
               <option value="blue">Blue</option>
@@ -98,14 +97,12 @@ class AddMessagePage extends Component {
             </select>
             <label>Message Font Type</label>
             <ul>
-              <li style={{fontFamily: "Punk Kid"}}>Punk Kid</li>
+              <li style={{fontFamily: "Punk Kid", fontSize: 18}}>Punk Kid</li>
               <li style={{fontFamily: "shonen punk v2"}}>Shonen Punk V2</li>
-              <li style={{fontFamily: "CFT masapunk"}}>CFT Masapunk</li>
-              {/* <li style={{fontFamily: "Streamzy"}}>Streamzy</li> */}
-              <li style={{fontFamily: "colour me purple"}}>Colour Me Purple</li>
-              <li style={{fontFamily: "hackattack"}}>Hackattack</li>
-              <li style={{fontFamily: "discontinuo tfb"}}>Discontinuo</li>
-              {/* <li style={{fontFamily: "punkinhead"}}>Punkinhead</li> */}
+              <li style={{fontFamily: "CFT masapunk", fontSize: 18}}>CFT Masapunk</li>
+              <li style={{fontFamily: "colour me purple", fontSize: 16}}>Colour Me Purple</li>
+              <li style={{fontFamily: "hackattack", fontSize: 19}}>Hackattack</li>
+              <li style={{fontFamily: "discontinuo tfb", fontSize: 18, fontWeight: 'bold'}}>Discontinuo</li>
             </ul>
             <select
               className="form-control"
@@ -118,11 +115,9 @@ class AddMessagePage extends Component {
               <option value="punk kid">Punk Kid</option>
               <option value="shonen punk v2">Shonen Punk V2</option>
               <option value="CFT masapunk">CFT Masapunk</option>
-              {/* <option value="Streamzy">Streamzy</option> */}
               <option value="colour me purple">Colour Me Purple</option>
               <option value="hackattack">Hackattack</option>
               <option value="discontinuo tfb">Discontinuo</option>
-              {/* <option value="punkinhead">Punkinhead</option> */}
             </select>
           </div>
           <button
