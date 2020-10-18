@@ -10,7 +10,6 @@ function WallItem(props) {
     fontSize: props.message.size,
     color: props.message.color,
     fontFamily: props.message.font,
-                                                
   }
 
   return (

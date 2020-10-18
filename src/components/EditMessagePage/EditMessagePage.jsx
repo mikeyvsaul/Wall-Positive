@@ -114,12 +114,12 @@ class EditMessagePage extends Component {
           </div>            
           <button
             type="submit"
-            className="btn btn-xs"
+            className="btn"
             disabled={this.state.invalidForm}
           >
             UPDATE MESSAGE
           </button>&nbsp;&nbsp;
-          <Link to='/'>CANCEL</Link>
+          <Link to='/list'>CANCEL</Link>
         </form>
       </>
     );
