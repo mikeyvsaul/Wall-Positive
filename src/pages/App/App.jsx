@@ -93,38 +93,38 @@ class App extends Component {
         <Switch>
           <Route exact path='/signup' render={({ history }) => 
             <SignupPage
-              history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
+            history={history}
+            handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
           <Route exact path='/login' render={({history}) => 
             <LoginPage
-              history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
+            history={history}
+            handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
           <Route exact path='/add' render={() => 
             <AddMessagePage
-              user={this.state.user}
-              state={this.state}
-              handleClick={this.handleClick} 
-              handleAddMessage={this.handleAddMessage}
+            user={this.state.user}
+            state={this.state}
+            handleClick={this.handleClick} 
+            handleAddMessage={this.handleAddMessage}
             />
           } />
           <Route exact path='/' render={({history}) => 
             <Wall
-              history={history}
-              user={this.state.user}
-              messages={this.state.messages}
-              handleClick={this.handleClick}
+            history={history}
+            user={this.state.user}
+            messages={this.state.messages}
+            handleClick={this.handleClick}
             />
           } />
           <Route exact path='/list' render={({history}) => 
             <MessageListPage
-              history={history}
-              user={this.state.user}
-              messages={this.state.messages}
-              handleDeleteMessage={this.handleDeleteMessage}
+            history={history}
+            user={this.state.user}
+            messages={this.state.messages}
+            handleDeleteMessage={this.handleDeleteMessage}
             />
           } />
           <Route exact path='/details' render={({location}) =>
@@ -132,11 +132,14 @@ class App extends Component {
           } />
           <Route exact path='/edit' render={({location}) =>
             <EditMessagePage
-              handleUpdateMessage={this.handleUpdateMessage}
-              location={location}
+            handleUpdateMessage={this.handleUpdateMessage}
+            location={location}
             />
           } />
         </Switch>
+        <footer>
+          <h5>This wall of positive vibes brought to you by Michael Saul 2020</h5>
+        </footer>
       </div>
     );
   }

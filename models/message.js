@@ -12,8 +12,8 @@ const messageSchema = new Schema({
   locationY: Number,
   orientation: Number,
   size: Number,
-  font: String,
   color: String,
+  font: String,
 }, {
   timestamps: true
 });
