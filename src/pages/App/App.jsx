@@ -81,11 +81,12 @@ class App extends Component {
 
   render() {
     return (
+      <>
+      <NavBar 
+      user={this.state.user} 
+      handleLogout={this.handleLogout}
+      />
       <main>
-        <NavBar 
-        user={this.state.user} 
-        handleLogout={this.handleLogout}
-        />
         <Switch>
           <Route exact path='/signup' render={({ history }) => 
             <SignupPage
@@ -137,6 +138,7 @@ class App extends Component {
           <h5 className="footer">Created in 2020. This wall of positive vibes brought to you by Michael Saul</h5>
         </footer>
       </main>
+          </>
     );
   }
 }

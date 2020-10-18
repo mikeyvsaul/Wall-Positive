@@ -9,7 +9,7 @@ class AddMessagePage extends Component {
       locationX: this.props.state.position[0],
       locationY: this.props.state.position[1],
       orientation: 0,
-      size: 0,
+      size: 22,
       color: '',
       font: '',
     }
@@ -32,7 +32,7 @@ class AddMessagePage extends Component {
 
   render() {
     return (
-      <>
+      <div className="add-message">
         <h2>Add Message</h2>
         <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
           <div className="form-group">
@@ -128,7 +128,7 @@ class AddMessagePage extends Component {
             ADD MESSAGE
           </button>
         </form>
-      </>
+      </div>
     );
   }
 }

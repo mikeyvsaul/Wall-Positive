@@ -22,14 +22,12 @@ const NavBar = (props) => {
     </div>;
 
   return (
-    <div className='NavBar'>
-      <nav>
-        {/* <img src="{logo}" alt="Logo"/> */}
+      <nav id="NavBar" className="navbar navbar-expand-lg NavBar w-auto">
+        <img className="Logo" src="WallPositiveGif.gif" alt="Logo"/>
         &nbsp;&nbsp;&nbsp;
         <NavLink exact to='/'>Home</NavLink>
+        {navUser}
       </nav>
-      {navUser}
-    </div>
   );
 };
 

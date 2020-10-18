@@ -18,7 +18,7 @@ function MessageListItem(props) {
         DETAILS
       </Link>
       <Link
-        className='btn btn-xs btn-warning'
+        className='btn btn-xs'
         to={{
           pathname: '/edit',
           state: {message: props.message}
