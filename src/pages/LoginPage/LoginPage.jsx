@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import userService from '../../utils/userService';
 import './LoginPage.css';
 
-class LoginPage extends Component {
-  
+class LoginPage extends Component {  
   state = {
     email: '',
     pw: ''
@@ -20,11 +19,9 @@ class LoginPage extends Component {
     e.preventDefault();
     try {
       await userService.login(this.state);
-      // Successfully logged up - show GamePage
       this.props.handleSignupOrLogin();
       this.props.history.push('/');
     } catch (err) {
-      // Invalid user data (probably duplicate email)
       alert('Invalid credentials');
     }
   }

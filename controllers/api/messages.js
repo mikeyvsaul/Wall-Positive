@@ -28,10 +28,6 @@ async function show(req, res) {
 
 async function create(req, res) {
   try {
-    // console.log(req.body)
-    // console.log(req.body.user)
-    // req.body.user = req.user._id;
-    // console.log(req.body.user)
     const message = await Message.create(req.body);
     res.status(201).json(message);
   } catch (err) {
@@ -50,7 +46,6 @@ async function deleteOne(req, res) {
 
 async function update(req, res) {
   try {
-    // req.body.user = req.user._id;
     const updatedMessage = await Message.findByIdAndUpdate(req.params.id, req.body, {new: true});
     res.status(200).json(updatedMessage);
   } catch (err) {

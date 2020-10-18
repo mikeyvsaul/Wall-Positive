@@ -9,7 +9,7 @@ class AddMessagePage extends Component {
       locationX: this.props.state.position[0],
       locationY: this.props.state.position[1],
       orientation: 0,
-      size: 20,
+      size: 0,
       color: '',
       font: '',
     }

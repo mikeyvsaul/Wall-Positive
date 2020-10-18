@@ -6,8 +6,11 @@ function MessageListPage(props) {
   let userMessages = props.messages.filter(message => message.user === props.user._id)
   return (
     <>
-      {!props.user ? (
-        <></>
+      {userMessages.length < 1 ? (
+        <>
+          <h1>Message List</h1>
+          <h3>You have no messages yet</h3>
+        </>
       ) : (
         <>
           <h1>Message List</h1>

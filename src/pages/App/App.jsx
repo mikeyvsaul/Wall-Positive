@@ -25,15 +25,12 @@ class App extends Component {
   async componentDidMount() {
     const messages = await messageAPI.getAll();
     this.setState({messages});
-    // document.getElementById('circles')
-    //   .addEventListener('click', this.handleClick)
   }
 
   handleClick = (e) => {
     let locX = e.clientX;
     let locY = e.clientY;
     const positionArr = [locX, locY];
-    // console.log(locX, locY)
     this.props.history.push({
       pathname: '/add',
       state: {
@@ -41,7 +38,6 @@ class App extends Component {
       }
     })
     this.setState({position: positionArr})
-    // console.log(this.props.history.state.place)
   }
 
   /*--- Callback Methods ---*/
