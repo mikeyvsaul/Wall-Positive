@@ -125,7 +125,7 @@ class AddMessagePage extends Component {
             className="btn"
             disabled={this.state.invalidForm}
           >
-            Add Message
+            ADD MESSAGE
           </button>
         </form>
       </>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class EditMessagePage extends Component {
   state = {
@@ -21,6 +21,19 @@ class EditMessagePage extends Component {
       invalidForm: !this.formRef.current.checkValidity()
     });
   };
+
+  handleUpdateClick = (e) => {
+    let locX = e.clientX;
+    let locY = e.clientY;
+    const positionArr = [locX, locY];
+    this.props.history.push({
+      pathname: '/edit',
+      state: {
+        position: positionArr
+      }
+    })
+    this.setState({position: positionArr})
+  }
 
   render() {
     return (
@@ -119,7 +132,7 @@ class EditMessagePage extends Component {
           >
             UPDATE MESSAGE
           </button>&nbsp;&nbsp;
-          <Link to='/list'>CANCEL</Link>
+          <NavLink to='/list'>CANCEL</NavLink>
         </form>
       </>
     );

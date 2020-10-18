@@ -81,7 +81,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <main>
         <NavBar 
         user={this.state.user} 
         handleLogout={this.handleLogout}
@@ -134,9 +134,9 @@ class App extends Component {
           } />
         </Switch>
         <footer>
-          <h5>This wall of positive vibes brought to you by Michael Saul 2020</h5>
+          <h5 className="footer">Created in 2020. This wall of positive vibes brought to you by Michael Saul</h5>
         </footer>
-      </div>
+      </main>
     );
   }
 }
