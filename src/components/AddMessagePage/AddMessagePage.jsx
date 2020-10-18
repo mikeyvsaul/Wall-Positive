@@ -81,13 +81,21 @@ class AddMessagePage extends Component {
               <option value="42">Level 10 Font Size</option>
             </select>
             <label>Message Color</label>
-            <input
+            <select
               className="form-control"
               name="color"
               value={this.state.formData.color}
               onChange={this.handleChange}
-              defaultValue="black"
-            />
+              // defaultValue="black"
+            >
+              <option value="black">Black</option>
+              <option value="blue">Blue</option>
+              <option value="red">Red</option>
+              <option value="purple">Purple</option>
+              <option value="orange">Orange</option>
+              <option value="green">Green</option>
+              <option value="pink">Pink</option>
+            </select>
             <label>Message Font Type</label>
             <ul>
               <li style={{fontFamily: "Punk Kid"}}>Punk Kid</li>
@@ -106,7 +114,7 @@ class AddMessagePage extends Component {
               onChange={this.handleChange}
               required
             >
-              <option value="">-</option>
+              <option value=""> - </option>
               <option value="punk kid">Punk Kid</option>
               <option value="shonen punk v2">Shonen Punk V2</option>
               <option value="CFT masapunk">CFT Masapunk</option>

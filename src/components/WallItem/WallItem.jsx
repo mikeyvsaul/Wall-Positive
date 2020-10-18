@@ -8,7 +8,7 @@ function WallItem(props) {
     top: props.message.locationY,
     transform: `rotate(${props.message.orientation}deg)`,
     fontSize: props.message.size,
-    color: 'blue',
+    color: props.message.color,
     fontFamily: props.message.font,
                                                 
   }

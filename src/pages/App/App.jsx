@@ -67,7 +67,7 @@ class App extends Component {
     await messageAPI.deleteOne(id);
     this.setState(state => ({
       messages: state.messages.filter(m => m._id !== id)
-    }), () => this.props.history.push('/'));
+    }), () => this.props.history.push('/list'));
   }
 
   handleUpdateMessage = async updatedMessageData => {
@@ -77,7 +77,7 @@ class App extends Component {
     );
     this.setState(
       {messages: newMessagesArray},
-      () => this.props.history.push('/')
+      () => this.props.history.push('/list')
     );
   }
 
