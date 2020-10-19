@@ -9,7 +9,7 @@ function MessageListItem(props) {
         <h3 className='panel-title'>{props.message.content}</h3>
       </div>
       <Link
-        className='btn btn-xs btn-info'
+        className="btn btn-xs btn-info margin-left-10"
         to={{
           pathname: '/details',
           state: {message: props.message}
@@ -18,7 +18,7 @@ function MessageListItem(props) {
         DETAILS
       </Link>
       <Link
-        className='btn btn-xs'
+        className="btn btn-xs btn-primary margin-left-10"
         to={{
           pathname: '/edit',
           state: {message: props.message}

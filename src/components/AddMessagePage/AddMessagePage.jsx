@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom'
 
 class AddMessagePage extends Component {
+  // Match formData to same key values in the Message model
   state = {
     invalidForm: true,
     formData: {
@@ -52,6 +54,7 @@ class AddMessagePage extends Component {
                 value={this.state.formData.orientation}
                 onChange={this.handleChange}
               >
+                <option value="">No Rotation</option>
                 <option value="36">Rotate 10% Clockwise</option>
                 <option value="72">Rotate 20% Clockwise</option>
                 <option value="108">Rotate 30% Clockwise</option>
@@ -128,6 +131,7 @@ class AddMessagePage extends Component {
             >
               ADD MESSAGE
             </button>
+            <NavLink to='/' style={{color: 'white', backgroundColor: 'red'}}>CANCEL</NavLink>
           </form>
         </div>
       </div>

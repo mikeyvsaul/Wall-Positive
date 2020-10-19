@@ -132,7 +132,7 @@ class EditMessagePage extends Component {
           >
             UPDATE MESSAGE
           </button>&nbsp;&nbsp;
-          <NavLink to='/list'>CANCEL</NavLink>
+          <NavLink to='/list' style={{color: 'white', backgroundColor: 'red'}}>CANCEL</NavLink>
         </form>
       </div>
     );

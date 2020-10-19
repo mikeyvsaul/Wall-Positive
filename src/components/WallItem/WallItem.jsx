@@ -2,6 +2,8 @@ import React from 'react';
 import './WallItem.css';
 
 function WallItem(props) {
+  // Using a variable for inline styling to match properties of the Message model in order to render each
+  // message uniquely
   const wallStyle = {
     position: 'absolute',
     left: props.message.locationX,

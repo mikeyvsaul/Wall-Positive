@@ -32,10 +32,12 @@ main {
 .footer {
   left: 0;
   bottom: 0;
-  width: auto;
+  width: 100%;
   position: fixed;
   background-color: black;
   color: white;
+  /* justify-content: center;
+  align-content: center; */
   text-align: center;
   margin-bottom: 0;
 }

@@ -27,6 +27,8 @@ class App extends Component {
     this.setState({messages});
   }
 
+  // Click function to get the X and Y locations passed as an array to be used in the formData
+  // for adding a new message
   handleClick = (e) => {
     let locX = e.clientX;
     let locY = e.clientY;
@@ -140,7 +142,7 @@ class App extends Component {
           </h5>
         </footer>
       </main>
-          </>
+      </>
     );
   }
 }

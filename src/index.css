@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(https://i.imgur.com/sD6dC8T.jpg);
+
 }
 
 code {
@@ -21,7 +23,7 @@ code {
 }
 
 a {
-  color: var(--accent);
+  color: var(--background);
   padding: 1vmin;
   border-radius: 1vmin;
   text-decoration: none !important;
