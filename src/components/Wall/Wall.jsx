@@ -7,7 +7,8 @@ function Wall(props) {
     <>
       {!props.user ? (
         <>
-          <h1 className="Site-title">Wall Positive</h1>
+          {/* <h1 className="Site-title">Wall Positive</h1> */}
+          <img className="Wall-logo" src="MainLogoWhite.gif" alt="logo"/>
           <h4 className="Site-title">Log in or Sign Up in Order to Post a Message</h4>
           <div className="Wall-grid">
             {props.messages.map(message => (
@@ -20,7 +21,8 @@ function Wall(props) {
         </>
       ) : (
         <>
-          <h1 className="Site-title">Wall Positive</h1>
+          {/* <h1 className="Site-title">Wall Positive</h1> */}
+          <img className="Wall-logo text-center" src="MainLogoWhite.gif" alt="logo"/>
           <h4 className="Site-title">Double Click anywhere to Create a Message</h4>
           <div className="Wall-grid" onDoubleClick={(e) => props.handleClick(e)}>
             {props.messages.map(message => (

@@ -2,6 +2,7 @@
   min-height: 100vh;
   display: grid;
   grid-template-rows: 7vmin auto;
+  background-image: url(https://i.imgur.com/CiEMGvU.jpg);
 }
 
 .App-header {
@@ -28,11 +29,11 @@
 }
 
 .footer {
-  /* position: fixed; */
   left: 0;
   bottom: 0;
   width: auto;
-  height: auto;  
+  /* height: auto;   */
+  /* position: absolute; */
   background-color: black;
   color: white;
   text-align: center;

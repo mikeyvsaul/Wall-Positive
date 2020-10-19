@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
-// import logo from '../../../src/Wall Positive Gif.gif'
 
 const NavBar = (props) => {
   let navUser = props.user ?
@@ -22,10 +21,10 @@ const NavBar = (props) => {
     </div>;
 
   return (
-      <nav id="NavBar" className="navbar navbar-expand-lg NavBar w-auto">
-        <img className="Logo" src="WallPositiveGif.gif" alt="Logo"/>
+      <nav id="NavBar" className="NavBar">
+        <img className="Logo" src="WallPositiveGif.gif" alt="Logo" />
         &nbsp;&nbsp;&nbsp;
-        <NavLink exact to='/'>Home</NavLink>
+        <NavLink exact to='/'>The Wall</NavLink>
         {navUser}
       </nav>
   );

@@ -12,9 +12,9 @@ function MessageListPage(props) {
           <h3>You have no messages yet</h3>
         </>
       ) : (
-        <>
+        <div className="MessageListPage">
           <h1>Message List</h1>
-          <div className="MessageListPage-grid">
+          <div className="MessageListPage-grid container">
             {userMessages.map(message => (
               <MessageListItem 
                 key={message._id} 
@@ -23,7 +23,7 @@ function MessageListPage(props) {
               />
             ))}
           </div>
-        </>
+        </div>
       )}
     </>
   );

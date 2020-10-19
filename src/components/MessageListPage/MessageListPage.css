@@ -1,3 +1,7 @@
+.MessageListPage {
+  min-height: 100vh;
+}
+
 .MessageListPage-grid {
   width: 80%;
   display: grid;

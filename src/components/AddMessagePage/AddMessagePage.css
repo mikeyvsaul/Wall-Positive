@@ -1,9 +1,14 @@
 .add-message {
   display: flex;
   justify-content: center;
+  min-height: 100vh;
 }
 
 .form-group {
   display: flex;
   justify-content: center;
+}
+
+.AddMessagePage {
+  min-height: 725px;
 }
