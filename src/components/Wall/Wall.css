@@ -6,31 +6,13 @@
 
 .Wall-grid {
   max-width: 1425px;
-  /* max-height: 725px; */
-  min-height: 725px;
+  min-height: 750px;
   background-image: url(https://i.imgur.com/XwQy98n.jpg);
   background-size: 100% 100%;
-  /* width: 100vw;
-  height: 100vh; */
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  grid-gap: 20px; */
 }
 
 .Wall-logo {
-  /* display: flex;
   justify-content: center;
-  align-content: center; */
+  align-content: center;
   max-height: 50px;
 }
-
-/* .Wall-grid {
-  list-style: none;
-  display: inline;
-  font: 12px Arial;
-  color: white;
-  border-radius: 4px;
-  background-color: gray;
-  padding: 4px;
-  margin-right: 5px;
-} */

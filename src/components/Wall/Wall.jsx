@@ -8,9 +8,9 @@ function Wall(props) {
     <>
       {!props.user ? (
         <>
-          <img className="Wall-logo" src="MainLogoWhite.gif" alt="logo"/>
           <h4 className="Site-title">Log in or Sign Up in Order to Post a Message</h4>
           <div className="Wall-grid">
+            <img className="Wall-logo" src="MainLogoWhite.gif" alt="logo"/>
             {props.messages.map(message => (
               <WallItem 
               key={message._id} 
@@ -21,9 +21,9 @@ function Wall(props) {
         </>
       ) : (
         <>
-          <img className="Wall-logo text-center" src="MainLogoWhite.gif" alt="logo"/>
           <h4 className="Site-title">Double Click anywhere to Create a Message</h4>
           <div className="Wall-grid" onDoubleClick={(e) => props.handleClick(e)}>
+            <img className="Wall-logo" src="MainLogoWhite.gif" alt="logo"/>
             {props.messages.map(message => (
               <WallItem 
               key={message._id} 
