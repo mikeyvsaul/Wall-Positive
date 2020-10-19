@@ -44,6 +44,7 @@ Edit Message Page:
 
 ### <ins>***Next Steps***</ins>
 - Add a filter to stop messages using certain words from being posted
+- Add animations when changing state or rendering a new page or component
 - Add a function that will allow a user to move the location of a message to a different part of the wall
 - Add a positive quote API that will display a new positive message on the wall daily
 - Create an admin portal to delete or change messages
