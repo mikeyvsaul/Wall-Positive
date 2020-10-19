@@ -5,8 +5,8 @@ import './NavBar.css';
 const NavBar = (props) => {
   let navUser = props.user ?
     <div>
-      {/* <NavLink exact to='/add' className='NavBar-link'>Add Message</NavLink>
-      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; */}
+      <NavLink exact to='/'>The Wall</NavLink>
+      &nbsp;&nbsp;&nbsp;
       <NavLink exact to='/list' className='NavBar-link'>Your Messages</NavLink>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <NavLink to='' className='NavBar-link' onClick={props.handleLogout}>LOG OUT</NavLink>
@@ -15,6 +15,8 @@ const NavBar = (props) => {
     </div>
     :
     <div>
+      <NavLink exact to='/'>The Wall</NavLink>
+      &nbsp;&nbsp;&nbsp;
       <NavLink to='/login' className='NavBar-link'>LOG IN</NavLink>
       &nbsp;&nbsp;|&nbsp;&nbsp;
       <NavLink to='/signup' className='NavBar-link'>SIGN UP</NavLink>
@@ -22,9 +24,7 @@ const NavBar = (props) => {
 
   return (
       <nav id="NavBar" className="NavBar">
-        <img className="Logo" src="WallPositiveGif.gif" alt="Logo" />
-        &nbsp;&nbsp;&nbsp;
-        <NavLink exact to='/'>The Wall</NavLink>
+        <img className="Logo" src="BlackWallPositiveGif.gif" alt="Logo" />
         {navUser}
       </nav>
   );

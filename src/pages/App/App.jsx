@@ -135,7 +135,9 @@ class App extends Component {
           } />
         </Switch>
         <footer>
-          <h5 className="footer">Created in 2020. This wall of positive vibes brought to you by Michael Saul</h5>
+          <h5 className="footer">
+            Created in 2020. This wall of positive vibes brought to you by Michael Saul. Logo by Micah Ellis
+          </h5>
         </footer>
       </main>
           </>

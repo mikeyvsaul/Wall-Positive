@@ -1,24 +1,21 @@
 .NavBar {
     display: flex;
-    justify-content: center;
-    /* margin: 0 0 20px; */
-    background-color: aquamarine;
-    /* margin-right: 0; */
+    justify-content: space-between;
+    background-color: rgb(114, 4, 4);
     width: auto;
-    
-  }
-  
-/* #NavBar {
-  width: auto !important; */
-/* } */
-  /* .NavBar-link {
-    margin: 0 10px;
-  } */
-  
-  .NavBar-welcome {
-    color: grey;
-  }
 
-  .Logo {
-    height: 4rem;
   }
+  
+.NavBar-link {
+  /* display: flex;
+  flex-direction: row; */
+  justify-content: space-between;
+}
+  
+.NavBar-welcome {
+  color: white;
+}
+
+.Logo {
+  height: 3.5rem;
+}

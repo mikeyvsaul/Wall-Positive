@@ -6,8 +6,8 @@ class AddMessagePage extends Component {
     formData: {
       content: '',
       user: this.props.user._id,
-      // locationX: this.props.state.position[0],
-      // locationY: this.props.state.position[1],
+      locationX: this.props.state.position[0],
+      locationY: this.props.state.position[1],
       orientation: 0,
       size: 22,
       color: '',
