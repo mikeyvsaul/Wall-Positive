@@ -10,12 +10,12 @@ function MessageListPage(props) {
     <>
       {userMessages.length < 1 ? (
         <div>
-          <h1>Message List</h1>
+          <h2>Message List</h2>
           <h3>You have no messages yet</h3>
         </div>
       ) : (
         <div className="MessageListPage container">
-          <h1>Message List</h1>
+          <h2>Message List</h2>
           <div className="MessageListPage-grid container">
             {userMessages.map(message => (
               <MessageListItem 
@@ -25,7 +25,7 @@ function MessageListPage(props) {
               />
             ))}
           </div>
-            <NavLink to='/'>RETURN TO WALL</NavLink>
+            <NavLink exact to='/' className="btn-primary">RETURN TO WALL</NavLink>
         </div>
       )}
     </>

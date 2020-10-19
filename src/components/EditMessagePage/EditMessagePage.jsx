@@ -38,7 +38,7 @@ class EditMessagePage extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Edit Message</h1>
+        <h2>Edit Message</h2>
         <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label>Message</label>
@@ -127,12 +127,12 @@ class EditMessagePage extends Component {
           </div>            
           <button
             type="submit"
-            className="btn"
+            className="btn btn-info"
             disabled={this.state.invalidForm}
           >
             UPDATE MESSAGE
           </button>&nbsp;&nbsp;
-          <NavLink to='/list' style={{color: 'white', backgroundColor: 'red'}}>CANCEL</NavLink>
+          <NavLink exact to='/list' className="btn btn-danger">CANCEL</NavLink>
         </form>
       </div>
     );

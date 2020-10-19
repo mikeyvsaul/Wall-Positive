@@ -131,7 +131,7 @@ class AddMessagePage extends Component {
             >
               ADD MESSAGE
             </button>
-            <NavLink to='/' style={{color: 'white', backgroundColor: 'red'}}>CANCEL</NavLink>
+            <NavLink exact to='/' className="btn-danger">CANCEL</NavLink>
           </form>
         </div>
       </div>

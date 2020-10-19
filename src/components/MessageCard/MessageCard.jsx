@@ -19,9 +19,9 @@ function MessageCard({message}) {
         </dl>
       </div>
       <div className='panel-footer'>
-        <NavLink to='/'>RETURN TO WALL</NavLink>
+        <NavLink exact to='/' className="btn-primary">RETURN TO WALL</NavLink>
         &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        <NavLink exact to='/list' className='NavBar-link'>Back to Your Messages</NavLink>
+        <NavLink exact to='/list' className='NavBar-link btn-info'>BACK TO YOUR MESSAGES</NavLink>
       </div>
     </div>
   );
