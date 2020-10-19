@@ -1,14 +1,9 @@
-.Site-title {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
 .Wall-grid {
   max-width: 1425px;
   min-height: 750px;
   background-image: url(https://i.imgur.com/XwQy98n.jpg);
   background-size: 100% 100%;
+  border: thick double;
 }
 
 .Wall-logo {

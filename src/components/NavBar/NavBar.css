@@ -1,3 +1,9 @@
+.Site-title {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 .NavBar {
     display: flex;
     justify-content: space-between;
