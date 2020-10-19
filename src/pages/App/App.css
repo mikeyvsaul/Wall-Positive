@@ -17,8 +17,6 @@
 main {
   background-color: var(--background);
   background-image: url(https://i.imgur.com/sD6dC8T.jpg);
-  /* display: flex;
-  flex-flow: column nowrap; */
   justify-content: center;
   align-items: center;
   font-family: 'Josefin Sans', sans-serif;
@@ -36,8 +34,6 @@ main {
   position: fixed;
   background-color: black;
   color: white;
-  /* justify-content: center;
-  align-content: center; */
   text-align: center;
   margin-bottom: 0;
 }

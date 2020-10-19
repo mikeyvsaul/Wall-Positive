@@ -31,9 +31,9 @@ class EditMessagePage extends Component {
       state: {
         position: positionArr
       }
-    })
+    });
     this.setState({position: positionArr})
-  }
+  };
 
   render() {
     return (
