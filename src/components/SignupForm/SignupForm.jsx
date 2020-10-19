@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import userService from '../../utils/userService';
 
 class SignupForm extends Component {
@@ -61,7 +61,7 @@ class SignupForm extends Component {
           <div className="form-group">
             <div className="col-sm-12 text-center">
               <button className="btn btn-default" disabled={this.isFormInvalid()}>Sign Up</button>&nbsp;&nbsp;
-              <Link to='/'>Cancel</Link>
+              <NavLink exact to='/' className="btn btn-danger">Cancel</NavLink>
             </div>
           </div>
         </form>
